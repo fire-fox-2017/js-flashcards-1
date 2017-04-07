@@ -68,7 +68,7 @@ class FlashCard {
     rl.prompt();
 
     rl.on('line', (input) => {
-        if(input == this._cards[i]['term']) {
+        if(input.toLower == this._cards[i]['term'].toLower) {
           console.log("Correct!");
           i += 1;
           if( i < this._cards.length) {
