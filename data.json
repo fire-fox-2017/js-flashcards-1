@@ -1,8 +1,31 @@
-[
-  {"definition": "Pada tahun 1602,Belanda mendirikan usaha dagang yang diberi nama", "term": "VOC"},
-  {"definition": "Konferensi Meja Bundar diadakan di Kota …", "term": "Bandung"},
-  {"definition": "Presiden RI Ke-3 adalah", "term": "Habibie"},
-  {"definition": "Ibukota Indonesia adalah", "term": "Jakarta"},
-  {"definition": "Apakah kota yang memiliki sebutan kota intan?", "term": "Garut"},
-  {"definition": "Pada tahun berapa indonesia merdeka?", "term": "1945"}
+[{
+        "definition": "Pada tahun 1602,Belanda mendirikan usaha dagang yang diberi nama",
+        "term": "VOC",
+        "answered": false
+    },
+    {
+        "definition": "Konferensi Meja Bundar diadakan di Kota …",
+        "term": "Bandung",
+        "answered": false
+    },
+    {
+        "definition": "Presiden RI Ke-3 adalah",
+        "term": "Habibie",
+        "answered": false
+    },
+    {
+        "definition": "Ibukota Indonesia adalah",
+        "term": "Jakarta",
+        "answered": false
+    },
+    {
+        "definition": "Apakah kota yang memiliki sebutan kota intan?",
+        "term": "Garut",
+        "answered": false
+    },
+    {
+        "definition": "Pada tahun berapa indonesia merdeka?",
+        "term": "1945",
+        "answered": false
+    }
 ]
