@@ -40,7 +40,6 @@ class FlashCard {
       console.log("\nCongratulation, you have answered all the questions!");
       process.exit();
     }
-
   }
 
   answerCheck(questionIndex, answer) {
