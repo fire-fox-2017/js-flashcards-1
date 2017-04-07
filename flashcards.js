@@ -23,11 +23,10 @@ class Flashcard {
 
   checkAnswer(){
     return this.file[this._next].term
-    // return this.check
   }
 
   result(){
-    console.log(`Congratulation Correct ${this._correct}`);
+    console.log(`Congratulation You Win!!!`);
   }
 
   set nextquest(input){
@@ -55,7 +54,7 @@ rl.prompt()
 // rl.close()
 rl.on('line', (line)=>{
   if(line.toLowerCase() == flash.checkAnswer().toLowerCase() && flash._next != flash.file.length){
-    flash.correct = 1
+    // flash.correct = 1
     flash.nextquest = 1
     if(flash._next != flash.file.length){
       flash.question()
@@ -65,13 +64,15 @@ rl.on('line', (line)=>{
       rl.close()
     }
   } else {
-    flash.nextquest = 1
+    // flash.nextquest = 1
+    console.log(`You Wrong Answer Try Again!!!`);
     if(flash._next != flash.file.length){
       flash.question()
       rl.prompt()
-    } else {
-      flash.result()
-      rl.close()
     }
+    // else {
+    //   flash.result()
+    //   rl.close()
+    // }
   }
 })
