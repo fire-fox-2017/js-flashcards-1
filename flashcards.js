@@ -38,7 +38,6 @@ class FlashCard {
   }
 
   practice() {
-    this._show.printWelcomeMsg();
 
     const readline = require('readline');
     const rl = readline.createInterface({
@@ -60,11 +59,11 @@ class FlashCard {
     //   })
     //
     // }
+    this._show.printWelcomeMsg();
 
     let i = 0;
 
-    console.log("Definition");
-    console.log(this._cards[i]['definition']);
+    this._show.printCard(this._cards[i]);
     rl.setPrompt("Guess: ");
     rl.prompt();
 
@@ -72,7 +71,7 @@ class FlashCard {
         if(input == this._cards[i]['term']) {
           console.log("Correct!");
           i += 1;
-          console.log(`\nDefinition\n${this._cards[i]['definition']}\n`);
+          this._show.printCard(this._cards[i]);
         }
         else {
           console.log("Incorrect! Try again\n");
@@ -86,7 +85,13 @@ class FlashCard {
 
 class Show {
   printWelcomeMsg() {
-    console.log("Welcome to JS Flash Cards. To Play, just enter the correct term for each definition. Ready? Go!\n");
+    console.log("Welcome to JS Flash Cards. To Play, just enter the correct term for each definition. Ready? Go!");
+  }
+
+  printCard(card) {
+
+    console.log(`\nDefinition\n${card['definition']}\n`);
+
   }
 }
 
