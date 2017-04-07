@@ -25,7 +25,7 @@ class FlashCard {
     let data = fs.readFileSync(this._file)
       .toString();
 
-    // console.log(data);
+    console.log(data);
     let json_data = JSON.parse(data);
     // console.log(json_data);
     // console.log(json_data[0]);
@@ -71,13 +71,23 @@ class FlashCard {
         if(input == this._cards[i]['term']) {
           console.log("Correct!");
           i += 1;
-          this._show.printCard(this._cards[i]);
+          if( i < this._cards.length) {
+            this._show.printCard(this._cards[i]);
+            rl.prompt();
+          }
+          else {
+            // console.log("here");
+            // this._show.printEndPractice();
+            rl.close();
+          }
         }
         else {
           console.log("Incorrect! Try again\n");
+          rl.prompt();
         }
 
-        rl.prompt();
+    }).on('close', () => {
+      this._show.printEndPractice();
     });
   } // end of practice
 
@@ -93,10 +103,15 @@ class Show {
     console.log(`\nDefinition\n${card['definition']}\n`);
 
   }
+
+  printEndPractice() {
+    console.log(`\nCongrats, you have completed your practice!`);
+  }
 }
 
 
-let file = "data.json"
+let file = "data.json";
+// let file = "datatest.json";
 let fc = new FlashCard(file);
 
 fc.initApp();
